@@ -1,5 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1f 1fr;
+  grid-template-rows: 20px 20px 1fr 20px;
+  grid-template-areas:
+    "title title"
+    "header header"
+    "sidebar content"
+    "footer footer";
+  height: 100vh;
+}
+
+.title {
+  grid-area: title;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
+}
+
 html {
   font-family: sans-serif;
   background: #2b2e3b;
   color: #9feaf9;
+}
+
+.grid div:nth-child(even) {
+  background-color: red;
+}
+
+.grid div:nth-child(odd) {
+  background-color: green;
 }
