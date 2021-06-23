@@ -3,28 +3,33 @@
   padding: 0;
 }
 
+.sideBarButton {
+  height: 30px;
+  width: 30px;
+  bottom: #009578;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: 1f 1fr;
-  grid-template-rows: 20px 20px 1fr 20px;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 1fr 25px;
   grid-template-areas:
-    "title title"
-    "header header"
     "sidebar content"
     "footer footer";
   height: 100vh;
 }
 
-.title {
-  grid-area: title;
-}
-
-.header {
-  grid-area: header;
-}
-
 .sidebar {
   grid-area: sidebar;
+  background: #292a2d;
 }
 
 .content {
@@ -33,6 +38,8 @@
 
 .footer {
   grid-area: footer;
+  background: #292a2d;
+  padding: 0em 1em;
 }
 
 html {
@@ -41,10 +48,10 @@ html {
   color: #9feaf9;
 }
 
-.grid div:nth-child(even) {
+/* .grid div:nth-child(even) {
   background-color: red;
 }
 
 .grid div:nth-child(odd) {
   background-color: green;
-}
+} */
