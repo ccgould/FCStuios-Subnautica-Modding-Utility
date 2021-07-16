@@ -1,0 +1,282 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #171717;
+  font-family: "Fira Sans", sans-serif;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "mainMenu mainBody";
+}
+
+.main-menu {
+  background-color: #fff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 0px 20px #d4d4d4;
+  grid-area: mainMenu;
+  width: 70px;
+  height: 100vh;
+
+  /* position: fixed; */
+  /* top: 0;
+  left: 0; */
+  
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+  transition: 0.3s ease;
+}
+
+.main-menu:hover {
+  width: 250px;
+  overflow-y: scroll;
+}
+
+.main-menu .menu-item {
+  padding: 10px;
+  -webkit-user-select: none;
+}
+.main-menu .menu-item:hover {
+  background-color: #d6d6d6;
+  cursor: pointer;
+}
+
+.main-menu .menu-item .fa {
+  color: gray;
+  width: 40px;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.main-menu .menu-item .fab {
+  color: gray;
+  width: 40px;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.main-menu .menu-item:hover > .fa {
+  color: #1d0daa;
+}
+
+.main-menu .menu-item:hover > .fab {
+  color: #1d0daa;
+}
+
+.body-container {
+  background-color: #171717;
+  height: 100vh;
+  width: 100%;
+  grid-area: mainBody;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* white-space: nowrap; */
+}
+
+
+section.home {
+  background-color: #f3f3f3;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bbbbbb;
+  border-radius: 10px;
+}
+
+.home-container{
+  color: #ccc;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "welcome image";
+  max-width: 960px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: auto;
+  font-weight: 400;
+}
+
+#home-description-container{
+  grid-area: welcome;
+  max-width: 400px;
+  margin: 0px 40px;
+}
+
+#home-image-container{
+  grid-area: image;
+}
+
+.home-text{
+  color: rgb(87, 87, 87);
+  grid-area: welcome;
+}
+
+#home-title{
+  color: #ccc;
+}
+
+/* Mod Page */
+.modPage-container{
+  background-color: #171717;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 232px auto;
+  grid-template-areas: "banner"
+                        "mods";
+
+}
+
+.mod-page-banner{
+  grid-area: banner;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:  center;
+  transition: background-image 0.3s ease-in-out 0s;
+  margin: 0px 10px;
+  border-radius: 8px 8px 8px 8px;
+  background-image: url("https://images7.alphacoders.com/902/902744.jpg");
+}
+
+.mod-page-items-area{
+  grid-area: mods;
+  display: grid;
+  grid-auto-rows: 154px;
+  row-gap: 20px;
+}
+
+/* Mod Item */
+.mod-item{
+  display: grid;
+  height: 154px;
+  margin: 10px;
+  border-radius: 8px 8px 8px 8px;
+  background-color: #272727;
+  color: #707070;
+  grid-template-rows: 0.5fr 1fr;
+  grid-template-areas: 
+  "top"
+  "text";
+  -webkit-user-select: none;
+}
+.mod-item-title-bar{
+  display: grid;
+  align-items: center;
+  border-radius: 8px 8px 0px 0px;
+  grid-template-columns: 58px 1fr auto auto;
+  grid-template-areas: "icon title toggle button";
+  background-color: #444444;
+  grid-area: top;
+}
+
+#mod-item-title{
+  font-weight: bold;
+  margin: 0px 10px;
+}
+
+.mod-item-text{
+  grid-area: text;
+  margin: 10px 10px;
+}
+
+#mod-item-configure-button{
+  margin: 0px 10px;
+  grid-area: button;
+}
+
+#mod-item-toggle-button{
+  grid-area: toggle;
+}
+
+#mod-item-icon{
+  grid-area: icon;
+  margin: 0px 10px;
+  clip-path: circle();
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+
+#mod-item-configure-button{
+  outline: none;
+  border: 0;
+  font-size: 15px;
+  font-weight: bold;
+  background: #006FFF;
+  border-radius: 8px;
+  line-height: 1;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  width: 120px;
+  height: 31px;
+}
+
+#mod-item-configure-button:hover{
+  background: #308aff;
+}
+
+#mod-item-configure-button:active{
+  background: #0163e2;
+}
+
+/* Toggle */
+.toggle-button{
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #727272;
+  transition: .4s;
+  border-radius: 15px;
+}
+
+.toggle-button input{
+  display: none;
+}
+
+.slider:before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 3px;
+  bottom: 2.5px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+input:checked + .slider{
+  background-color: #006FFF;
+}
+
+input:checked + .slider:before{
+  transform: translateX(30px);
+}
